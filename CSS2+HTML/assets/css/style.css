@@ -76,7 +76,8 @@ section h2 {
 #logoHtml {
   border: solid 0.5rem #00a0c6;
   outline: solid 0.5rem #a02571;
-  padding: 0.5rem;
+  margin-right: 20px;
+  padding: 3px;
 }
 /* ELEMENTI NEL MAIN - ARTICLE */
 h1 {
@@ -246,18 +247,38 @@ footer a {
 }
 @media screen and (min-width: 1200px) {
   header {
+    text-align: left;
+    padding-bottom: 17px;
+    padding-top: 12px;
+  }
+  header .brand,
+  header nav,
+  header .brand p {
     display: inline-block;
   }
-  header div {
+  header .brand {
+    width: 75%;
+  }
+  header .brand img {
     vertical-align: middle;
   }
+  header .brand p {
+    margin-bottom: 0;
+  }
+
+  header div {
+    display: inline-block;
+    align-items: center;
+  }
+  body {
+    line-height: 2;
+  }
+
   main {
-    width: 1150px;
     margin: auto;
     margin-bottom: 1.5em;
   }
   footer {
-    width: 1150px;
     margin: auto;
   }
   header img header div p {
@@ -269,23 +290,72 @@ footer a {
   header img {
     display: block;
   }
-  header div img {
-    margin-bottom: -80px;
-  }
+
   ul ol {
     line-height: 1.8em;
   }
   article h2 {
     margin-bottom: 0.5em;
   }
-  iframe {
-    width: 49%;
-  }
-
+  iframe,
   section {
-    width: 49%;
+    display: inline-block;
+    width: 50%;
+    margin-inline: -2px;
+    vertical-align: middle;
+  }
+  iframe {
+    height: 267px;
+  }
+  section {
+    border-radius: 20px;
+    height: 267px;
   }
   #videoNovità {
-    display: flex;
+    display: inline-block;
+  }
+  aside div {
+    display: inline-block;
+    width: 33.33%;
+    margin-inline: -2px;
+  }
+  footer {
+    padding: 1em 12em;
+  }
+  header,
+  main,
+  footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media print {
+  body {
+    font-size: 20px;
+    background-image: none;
+  }
+  main {
+    box-shadow: none;
+    margin: 0;
+  }
+  header,
+  article section,
+  iframe,
+  aside,
+  footer,
+  .social,
+  .toTop {
+    display: none;
+  }
+  #logoHtml {
+    padding: 1px;
+  }
+
+  header div p {
+    color: black;
+  }
+  main {
+    box-shadow: none;
   }
 }
